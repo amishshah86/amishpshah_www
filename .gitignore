@@ -1,4 +1,10 @@
-# Virtualenv
+# node/sass stuff
+node_modules/
+npm-debug.log
+*.scssc
+
+
+# virtualenv
 .Python
 bin
 lib
