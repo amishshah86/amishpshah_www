@@ -1,9 +1,13 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    'http-server': {
+    //require dependencies
+    require('load-grunt-tasks')(grunt);
+
+    // Project configuration.
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+
+        'http-server': {
 
             'dev': {
 
@@ -27,12 +31,36 @@ module.exports = function(grunt) {
 
             }
 
+        },
+
+        sass: {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    'public/style.css': 'src/scss/style.scss',
+                    'public/prop/style.css': 'src/prop/scss/style.scss'
+                }
+            }
+        },
+
+        watch: {
+            css:{
+                files:'src/**/*.scss',
+                tasks:['sass']
+            }
         }
-  });
 
-  grunt.loadNpmTasks('grunt-http-server');
 
-  // Default task(s).
-  grunt.registerTask('default', ['http-server:dev']);
+
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-http-server');
+
+    // Default task(s).
+    grunt.registerTask('default', ['http-server', 'watch', 'http-server:dev']);
+    grunt.registerTask('build', ['sass', 'http-server:dev', ]);
 
 };
