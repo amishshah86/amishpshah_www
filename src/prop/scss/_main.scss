@@ -1,4 +1,12 @@
-html{
+
+$viewportWidth: 900px;
+$viewportHeight: 600px;
+$baseFontSize: 18px;
+$baseFontFamily: 'Arvo', serif;
+
+$scene1Color: #ffe;
+
+html {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -6,9 +14,12 @@ html{
 	right: 0;
 	height: 100%;
 	width: 100%;
+	font-size: $baseFontSize;
+	font-family: $baseFontFamily;
+	text-rendering: optimizeLegibility;
 }
 
-.wrap{
+.wrap {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -16,12 +27,48 @@ html{
 	padding: 0;
 }
 
-$viewportWidth: 900px;
-$viewportHeight: 600px;
-
-.viewport-wrap{
+.viewport {
 	position: fixed;
 	width: $viewportWidth;
 	height: $viewportHeight;
 	margin: auto auto;
+
+	/* border: 1px solid red; */
+}
+
+.scene {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	.poem {
+		width: 60%;
+		margin: 0 auto;
+		font-size: 1.6em;
+		text-align: center;
+		p {
+			margin: 0.2em 0;
+		}
+	}
+}
+
+.scene1 {
+	color: $scene1Color;
+
+	.sprite{
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.aBase{
+		background-image:url('assets/a.svg');
+		width: 163px;
+		height: 300px;
+		position: absolute;
+		bottom: 0px;
+		left: 240px;
+	}
 }

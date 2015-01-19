@@ -36,7 +36,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 1, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+/* line 9, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
 html {
   position: absolute;
   top: 0;
@@ -44,9 +44,12 @@ html {
   left: 0;
   right: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Arvo', serif;
+  text-rendering: optimizeLegibility; }
 
-/* line 11, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+/* line 22, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
 .wrap {
   position: relative;
   width: 100%;
@@ -54,11 +57,46 @@ html {
   margin: 0;
   padding: 0; }
 
-/* line 22, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
-.viewport-wrap {
+/* line 30, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+.viewport {
   position: fixed;
   width: 900px;
   height: 600px;
-  margin: auto auto; }
+  margin: auto auto;
+  /* border: 1px solid red; */ }
+
+/* line 39, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+  /* line 46, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+  .scene .poem {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.6em;
+    text-align: center; }
+    /* line 51, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+    .scene .poem p {
+      margin: 0.2em 0; }
+
+/* line 57, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+.scene1 {
+  color: #ffe; }
+  /* line 60, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+  .scene1 .sprite {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  /* line 66, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+  .scene1 .aBase {
+    background-image: url('assets/a.svg');
+    width: 163px;
+    height: 300px;
+    position: absolute;
+    bottom: 0px;
+    left: 240px; }
 
 /*# sourceMappingURL=style.css.map */
