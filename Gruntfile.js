@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                 ext: "html",
 
                 // run in parallel with other tasks
-                runInBackground: false
+                runInBackground: true
 
             }
 
@@ -46,8 +46,17 @@ module.exports = function(grunt) {
         },
 
         watch: {
+            configFiles: {
+                files: [ 'Gruntfile.js']
+            },
+            options: {
+                'livereload': true
+            },
             css:{
-                files:'src/**/*.scss',
+                files:[
+                    'src/scss/*.scss',
+                    'src/prop/scss/*.scss'
+                ],
                 tasks:['sass']
             }
         }
@@ -60,7 +69,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-http-server');
 
     // Default task(s).
-    grunt.registerTask('default', ['http-server', 'watch', 'http-server:dev']);
-    grunt.registerTask('build', ['sass', 'http-server:dev', ]);
+    grunt.registerTask('default', ['http-server:dev','watch']);
+    grunt.registerTask('build', ['sass', 'http-server:dev','watch']);
 
 };
