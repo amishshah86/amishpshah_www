@@ -1,0 +1,66 @@
+.aBase {
+	background-image:url('assets/a.svg');
+	/* width: 163px;
+	height: 300px; */
+	width: 242px;
+	height: 444px;
+	position: absolute;
+	bottom: 0px;
+	left: 240px;
+
+	.eyebrows {
+		width: 149px;
+		height: 9px;
+		top: 98px;
+		left: 45px;
+	}
+
+	.eyes {
+		width: 129px;
+		height: 11px;
+		top: 137px;
+		left: 56px;
+	}
+
+	.glasses {
+		width: 225px;
+		height: 43px;
+		top:120px;
+		left: 9px;
+	}
+
+	.mouth_smile {
+		width: 49px;
+		height: 10px;
+		top: 205px;
+		left: 94px;
+	}
+
+	.mouth_o {
+		width: 10px;
+		height: 10px;
+		top: 208px;
+		left: 114px;
+	}
+
+	.l_heart{
+		width: 33px;
+		height: 32px;
+		top: 124px;
+		left: 59px;
+	}
+
+	.r_heart{
+		width: 33px;
+		height: 32px;
+		top: 125px;
+		left: 148px;
+	}
+
+	.blush{
+		width: 186px;
+		height: 53px;
+		top: 182px;
+		left: 27.27px;
+	}
+}

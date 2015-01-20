@@ -83,20 +83,91 @@ html {
       margin: 0.2em 0; }
 
 /* line 57, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+.sprite {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+/* line 63, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+.feature {
+  position: absolute; }
+
+/* line 67, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
 .scene1 {
   color: #ffe; }
-  /* line 60, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
-  .scene1 .sprite {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
-  /* line 66, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+  /* line 1, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
   .scene1 .aBase {
     background-image: url('assets/a.svg');
-    width: 163px;
-    height: 300px;
+    /* width: 163px;
+	height: 300px; */
+    width: 242px;
+    height: 444px;
     position: absolute;
     bottom: 0px;
     left: 240px; }
+    /* line 11, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
+    .scene1 .aBase .eyebrows {
+      width: 149px;
+      height: 9px;
+      top: 98px;
+      left: 45px; }
+    /* line 18, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
+    .scene1 .aBase .eyes {
+      width: 129px;
+      height: 11px;
+      top: 137px;
+      left: 56px; }
+    /* line 25, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
+    .scene1 .aBase .glasses {
+      width: 225px;
+      height: 43px;
+      top: 120px;
+      left: 9px; }
+    /* line 32, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
+    .scene1 .aBase .mouth_smile {
+      width: 49px;
+      height: 10px;
+      top: 205px;
+      left: 94px; }
+    /* line 39, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
+    .scene1 .aBase .mouth_o {
+      width: 10px;
+      height: 10px;
+      top: 208px;
+      left: 114px; }
+    /* line 46, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
+    .scene1 .aBase .l_heart {
+      width: 33px;
+      height: 32px;
+      top: 124px;
+      left: 59px; }
+    /* line 53, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
+    .scene1 .aBase .r_heart {
+      width: 33px;
+      height: 32px;
+      top: 125px;
+      left: 148px; }
+    /* line 60, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
+    .scene1 .aBase .blush {
+      width: 186px;
+      height: 53px;
+      top: 182px;
+      left: 27.27px; }
+  /* line 1, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_p */
+  .scene1 .pBase {
+    background-image: url('assets/p.svg');
+    /* width: 163px;
+	height: 300px; */
+    width: 191.7px;
+    height: 400px;
+    position: absolute;
+    bottom: 0px;
+    right: 240px; }
+    /* line 11, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_p */
+    .scene1 .pBase .eyebrows {
+      width: 149px;
+      height: 9px;
+      top: 98px;
+      left: 45px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -54,21 +54,19 @@ html {
 	}
 }
 
+.sprite {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.feature {
+	position: absolute;
+}
+
 .scene1 {
 	color: $scene1Color;
 
-	.sprite{
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
-
-	.aBase{
-		background-image:url('assets/a.svg');
-		width: 163px;
-		height: 300px;
-		position: absolute;
-		bottom: 0px;
-		left: 240px;
-	}
+	@import 'sprite_a';
+	@import 'sprite_p';
 }
