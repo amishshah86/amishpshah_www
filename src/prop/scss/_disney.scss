@@ -1,0 +1,31 @@
+.disney {
+	background-image:url('assets/disney.svg');
+	/* width: 163px;
+	height: 300px; */
+	width: 325px;
+	height: 310px;
+	position: absolute;
+	bottom: 8px;
+	left: 0px;
+
+	.mickey_green {
+		width: 75.3px;
+		height: 113.3px;
+		top: 90.5px;
+		left: 4.6px;
+	}
+
+	.mickey_pink {
+		width: 35px;
+		height: 93px;
+		top: 0px;
+		left: 94px;
+	}
+
+	.mickey_purple {
+		width: 66px;
+		height: 156px;
+		top: 30px;
+		left: 226px;
+	}
+}

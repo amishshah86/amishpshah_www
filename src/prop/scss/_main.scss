@@ -2,7 +2,7 @@
 $viewportWidth: 900px;
 $viewportHeight: 600px;
 $baseFontSize: 18px;
-$baseFontFamily: 'Arvo', serif;
+$baseFontFamily: 'Arvo', sans-serif;
 
 $scene1Color: #ffe;
 
@@ -25,6 +25,11 @@ html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	background-color: rgb(17, 78, 133);
+	background-image: url(assets/grunge_overlay.png);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .viewport {
@@ -44,7 +49,8 @@ html {
 	padding: 0;
 
 	.poem {
-		width: 60%;
+		position: fixed;
+		width: 70%;
 		margin: 0 auto;
 		font-size: 1.6em;
 		text-align: center;
@@ -69,4 +75,7 @@ html {
 
 	@import 'sprite_a';
 	@import 'sprite_p';
+	@import 'disney';
+	@import 'sf';
+	@import 'heart';
 }

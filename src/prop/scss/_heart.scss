@@ -1,0 +1,16 @@
+.heart {
+	background-image: url('assets/heart.svg');
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	bottom: 100px;
+	left: 300px;
+	text-align: center;
+
+	.ap{
+		position: relative;
+		width: 205px;
+		height: 437px;
+		margin: -60px auto;
+	}
+}

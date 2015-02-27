@@ -46,7 +46,7 @@ html {
   height: 100%;
   width: 100%;
   font-size: 18px;
-  font-family: 'Arvo', serif;
+  font-family: 'Arvo', sans-serif;
   text-rendering: optimizeLegibility; }
 
 /* line 22, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
@@ -55,9 +55,14 @@ html {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #114e85;
+  background-image: url(assets/grunge_overlay.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
-/* line 30, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+/* line 35, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
 .viewport {
   position: fixed;
   width: 900px;
@@ -65,34 +70,35 @@ html {
   margin: auto auto;
   /* border: 1px solid red; */ }
 
-/* line 39, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+/* line 44, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
 .scene {
   position: relative;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0; }
-  /* line 46, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+  /* line 51, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
   .scene .poem {
-    width: 60%;
+    position: fixed;
+    width: 70%;
     margin: 0 auto;
     font-size: 1.6em;
     text-align: center; }
-    /* line 51, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+    /* line 57, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
     .scene .poem p {
       margin: 0.2em 0; }
 
-/* line 57, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+/* line 63, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
 .sprite {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
 
-/* line 63, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+/* line 69, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
 .feature {
   position: absolute; }
 
-/* line 67, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
+/* line 73, /Users/amish/localrepo/amishpshah_www/src/prop/scss/main */
 .scene1 {
   color: #ffe; }
   /* line 1, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_a */
@@ -164,10 +170,100 @@ html {
     bottom: 0px;
     right: 240px; }
     /* line 11, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_p */
-    .scene1 .pBase .eyebrows {
-      width: 149px;
-      height: 9px;
-      top: 98px;
-      left: 45px; }
+    .scene1 .pBase .hair_front_main {
+      width: 180.6px;
+      height: 157.2px;
+      top: 9px;
+      left: 11px; }
+    /* line 18, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_p */
+    .scene1 .pBase .hair_bang_bottom {
+      width: 80px;
+      height: 80px;
+      top: 35px;
+      left: 62px; }
+    /* line 25, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sprite_p */
+    .scene1 .pBase .hair_bang_top {
+      width: 91.5px;
+      height: 76px;
+      top: 34px;
+      left: 58px; }
+  /* line 1, /Users/amish/localrepo/amishpshah_www/src/prop/scss/disney */
+  .scene1 .disney {
+    background-image: url('assets/disney.svg');
+    /* width: 163px;
+	height: 300px; */
+    width: 325px;
+    height: 310px;
+    position: absolute;
+    bottom: 8px;
+    left: 0px; }
+    /* line 11, /Users/amish/localrepo/amishpshah_www/src/prop/scss/disney */
+    .scene1 .disney .mickey_green {
+      width: 75.3px;
+      height: 113.3px;
+      top: 90.5px;
+      left: 4.6px; }
+    /* line 18, /Users/amish/localrepo/amishpshah_www/src/prop/scss/disney */
+    .scene1 .disney .mickey_pink {
+      width: 35px;
+      height: 93px;
+      top: 0px;
+      left: 94px; }
+    /* line 25, /Users/amish/localrepo/amishpshah_www/src/prop/scss/disney */
+    .scene1 .disney .mickey_purple {
+      width: 66px;
+      height: 156px;
+      top: 30px;
+      left: 226px; }
+  /* line 1, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sf */
+  .scene1 .sf {
+    /* width: 163px;
+	height: 300px; */
+    width: 352px;
+    height: 321px;
+    position: absolute;
+    bottom: 40px;
+    right: 0px; }
+    /* line 10, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sf */
+    .scene1 .sf .clouds {
+      background-image: url('assets/clouds.svg');
+      width: 352px;
+      height: 50px;
+      top: 0px;
+      left: 0px;
+      background-position: 0 0;
+      background-size: 352px 50px;
+      background-repeat: repeat-x; }
+    /* line 21, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sf */
+    .scene1 .sf .bridge {
+      width: 352px;
+      height: 182px;
+      top: 47px;
+      right: 0px; }
+    /* line 28, /Users/amish/localrepo/amishpshah_www/src/prop/scss/sf */
+    .scene1 .sf .water {
+      background-image: url('assets/water.svg');
+      width: 352px;
+      height: 102px;
+      bottom: 0px;
+      right: 0px;
+      background-position: 0 0;
+      background-size: 352px 102px;
+      background-repeat: repeat-x; }
+  /* line 1, /Users/amish/localrepo/amishpshah_www/src/prop/scss/heart */
+  .scene1 .heart {
+    background-image: url('assets/heart.svg');
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: 100px;
+    left: 300px;
+    text-align: center; }
+    /* line 10, /Users/amish/localrepo/amishpshah_www/src/prop/scss/heart */
+    .scene1 .heart .ap {
+      position: relative;
+      width: 205px;
+      height: 437px;
+      margin: -60px auto; }
 
 /*# sourceMappingURL=style.css.map */
