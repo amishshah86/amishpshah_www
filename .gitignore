@@ -1,4 +1,5 @@
 # node/sass stuff
+bower_components/*
 node_modules/
 npm-debug.log
 *.scssc
