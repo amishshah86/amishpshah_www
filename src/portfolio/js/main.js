@@ -1,6 +1,4 @@
-'use strict';
-
-var $ = require('jquery');
+$ = require('jquery');
 var angular = require('angular');
 
 require('angular-ui-router');
@@ -9,7 +7,8 @@ require('./components/gallery/gallery-controller');
 
 angular.module('portfolio', [
         'ui.router',
-        'portfolio.gallery'
+        'portfolio.gallery',
+        'slick'
     ])
 
     .controller('MainController', [

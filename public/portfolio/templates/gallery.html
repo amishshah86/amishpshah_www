@@ -1,9 +1,33 @@
-<div class="header">
-    <div class="logo">
-        <a ui-sref="/">AMISH SHAH</a>
-    </div>
-</div>
 
 <div class="gallery" ng-controller="GalleryController">
-    
+    <div class="heading allcaps">
+        <a class="homelink" ui-sref="home">
+            <img src="assets/logo_amish_shah.png"/>
+            Home
+        </a>
+        <span class="pagetitle" ui-sref="gallery">
+            Gallery
+        </span>
+    </div>
+    <section class="projects listreports">
+        <div class="heading allcaps">
+            <img src="assets/logo_listreports.png"/>
+            <div class="name">ListReports</div>
+        </div>
+
+        <div class="slick-wrap">
+            <slick dots="true"
+                >
+                <div class="slide" ng-style="{'height': window_height * 0.6 + 'px'}">
+                    Hello There
+                </div>
+                <div class="slide" ng-style="{'height': window_height * 0.6 + 'px'}">
+                    What's
+                </div>
+                <div class="slide" ng-style="{'height': window_height * 0.6 + 'px'}">
+                    up
+                </div>
+            </slick>
+        </div>
+    </section>
 </div>

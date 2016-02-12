@@ -1,30 +1,82 @@
-.landing-wrap{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+@import 'slick';
+@import 'slick-theme';
 
-.heading {
-    font-family: $base-sans-serif-font-family;
-    font-size: em(28);
-    @include tablet { font-size: em(32); }
-    @include desktop { font-size: em(42); }
-    color: $heading-text-color;
-}
 
-.blurb {
-    width: 60%;
-    margin: 2% auto;
-    font-size: 1em;
-    color: $subheading-text-color;
-    font-family: $base-serif-font-family;
-}
+.gallery {
+    .heading {
+        font-family: $base-sans-serif-font-family;
+        color: $heading-text-color;
+        text-align: center;
+        font-size: em(18);
+        @include tablet { font-size: em(20); text-align: left;}
+        @include desktop { font-size: em(20); text-align: left;}
 
-.nav {
-    max-width: 80%;
-    margin: 4% auto;
-}
+        padding: 3% 1%;
 
-.nav-btn {
-    padding: 0.5% 1%;
+        .homelink {
+            padding-right: 0;
+            margin-right: 8px;
+
+            img {
+                height: 24px;
+                margin-top: -4px;
+                margin-right: 4px;
+                vertical-align: middle;
+                @include tablet {
+                    height: 30px;
+                    margin-top: -6px;
+                    margin-right: 6px;
+                }
+                @include desktop {
+                    height: 40px;
+                    margin-top: -8px;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        a.homelink:hover{
+            border-bottom: 1px solid transparent;
+        }
+
+        .pagetitle {
+            padding-left: 12px;
+            border-left: 1px solid $border-light-color;
+        }
+    }
+
+    .projects{
+        padding: 1%;
+
+        .heading {
+            font-size: em(20);
+            @include tablet { font-size: em(22); }
+            @include desktop { font-size: em(22); }
+
+            padding: 1% 0;
+            overflow: hidden;
+            height: 30px;
+            @include tablet { height: 40px; }
+            @include desktop { height: 50px; }
+
+            border-bottom: 1px solid $border-light-color;
+
+            img {
+                max-height: 100%;
+                vertical-align: middle;
+                float: left;
+            }
+
+            .name {
+                margin-top: 1%;
+                float: right;
+            }
+        }
+
+        .slick-wrap {
+            position: relative;
+            width: 100%;
+        }
+
+    }
 }

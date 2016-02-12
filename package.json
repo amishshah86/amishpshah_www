@@ -39,5 +39,9 @@
     "angular-ui-router": "^0.2.13",
     "jquery": "^2.2.0",
     "modernizr": "^3.3.1"
+  },
+  "browser": {
+    "angular-slick": "./bower_components/angular-slick/dist/slick.js",
+    "slick-carousel": "./bower_components/slick-carousel/slick/slick.min.js"
   }
 }
