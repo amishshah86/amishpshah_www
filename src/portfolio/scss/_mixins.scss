@@ -1,0 +1,201 @@
+/*  All mixins can go here */
+
+
+
+/*  TYPOGRAPHY */
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+@mixin placeholder($color, $font: 'proxima') {
+    ::-webkit-input-placeholder {
+       color: $color;
+       font-family: $font;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+       color: $color;
+       font-family: $font;
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: $color;
+       font-family: $font;
+    }
+    :-ms-input-placeholder {
+       color: $color;
+       font-family: $font;
+    }
+}
+
+
+/*  LAYOUT */
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+
+
+@mixin boxshadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $left $top $blur $color;
+           -moz-box-shadow:inset $left $top $blur $color;
+                box-shadow:inset $left $top $blur $color;
+    } @else {
+        -webkit-box-shadow: $left $top $blur $color;
+           -moz-box-shadow: $left $top $blur $color;
+                box-shadow: $left $top $blur $color;
+    }
+}
+
+
+/*  MEDIA QUERIES */
+
+$tablet-width: 768;
+$desktop-width: 1024;
+
+@mixin mobile {
+    @media (max-width: #{$tablet-width - 1}px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}px) and (max-width: #{$desktop-width - 1}px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}px) {
+        @content;
+    }
+}
+
+@mixin ie-only {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+        @content;
+    }
+}
+
+
+/*  TRANSITIONS */
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+       -moz-transition: $args;
+        -ms-transition: $args;
+         -o-transition: $args;
+            transition: $args;
+}
+
+@mixin transition-duration($duration...) {
+    -webkit-transition-property: $duration;
+       -moz-transition-property: $duration;
+         -o-transition-property: $duration;
+            transition-property: $duration;
+}
+
+/*  ANIMATIONS */
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content
+    }
+    @-moz-keyframes #{$name} {
+        @content
+    }
+    @-ms-keyframes #{$name} {
+        @content
+    }
+    @-o-keyframes #{$name} {
+        @content
+    }
+    @keyframes #{$name} {
+        @content
+    }
+}
+
+@mixin animation($value) {
+    -webkit-animation: $value;
+       -moz-animation: $value;
+        -ms-animation: $value;
+         -o-animation: $value;
+            animation: $value;
+}
+
+
+/*  TRANSFORM  */
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+   @include transform(scale($scale));
+}
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    -webkit-transform-origin: $origin;
+       -moz-transform-origin: $origin;
+        -ms-transform-origin: $origin;
+         -o-transform-origin: $origin;
+            transform-origin: $origin;
+}
+
+
+
+/*  RETINA */
+
+@mixin background-image-retina($file, $type, $width, $height) {
+    background-image: url($file + '.' + $type);
+    -webkit-background-size: $width $height;
+       -moz-background-size: $width $height;
+         -o-background-size: $width $height;
+            background-size: $width $height;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        & {
+          background-image: url($file + '@2x.' + $type);
+        }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+    only screen and (-moz-min-device-pixel-ratio: 3),
+    only screen and (-o-min-device-pixel-ratio: 3/1),
+    only screen and (min-device-pixel-ratio: 3),
+    only screen and (min-resolution: 3dppx) {
+        & {
+          background-image: url($file + '@3x.' + $type);
+        }
+    }
+}
+

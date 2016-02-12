@@ -40,8 +40,16 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'public/style.css': 'src/scss/style.scss',
-                    'public/prop/style.css': 'src/prop/scss/style.scss'
+                    'public/prop/style.css': 'src/prop/scss/style.scss',
+                    'public/portfolio/style.css': 'src/portfolio/scss/style.scss'
                 }
+            }
+        },
+
+        browserify: {
+            main: {
+                src: 'src/portfolio/js/main.js',
+                dest: 'public/portfolio/js/main.js'
             }
         },
 
@@ -55,9 +63,16 @@ module.exports = function(grunt) {
             css:{
                 files:[
                     'src/scss/*.scss',
-                    'src/prop/scss/*.scss'
+                    'src/prop/scss/*.scss',
+                    'src/portfolio/scss/*.scss'
                 ],
                 tasks:['sass']
+            },
+            js:{
+                files:[
+                    'src/portfolio/js/*.js'
+                ],
+                tasks:['browserify']
             }
         }
 
@@ -67,9 +82,10 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-http-server');
+    grunt.loadNpmTasks('grunt-browserify');
 
     // Default task(s).
     grunt.registerTask('default', ['http-server:dev','watch']);
-    grunt.registerTask('build', ['sass', 'http-server:dev','watch']);
+    grunt.registerTask('build', ['sass', 'browserify', 'http-server:dev', 'watch']);
 
 };

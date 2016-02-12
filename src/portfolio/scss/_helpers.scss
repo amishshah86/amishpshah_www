@@ -1,0 +1,83 @@
+/*************************
+
+    CSS HELPER CLASSES
+
+*************************/
+
+.centered{
+    text-align: center;
+}
+
+.justified{
+    text-align: justify;
+}
+
+.float-left{
+    float: left;
+    overflow: hidden;
+}
+
+.float-right{
+    float: right;
+    overflow: hidden;
+}
+
+.clear{
+    clear: both;
+}
+
+.hidden{
+    display: none;
+}
+
+.show-block{
+    display: block;
+}
+
+.show-table{
+    display: table;
+}
+
+.show-table-cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.allcaps{
+    text-transform: uppercase;
+}
+
+.bolded{
+    font-weight: bold !important;
+}
+
+.img-wrap{
+    text-align: center;
+    img{
+        max-width: 100%;
+    }
+}
+
+.bg-cover{
+    background-position: center;
+    background-size: cover;
+    backround-repeat: no-repeat;
+}
+
+.circle-mask-bg{
+    height: 100%;
+    border-radius: 50%;
+    @extend .bg-cover;
+}
+
+.white-text{
+    color: #fff;
+}
+
+a:link, a:active, a:hover, a:visited{
+    text-decoration: none;
+}

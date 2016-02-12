@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/reset */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 29, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/reset */
+body {
+  line-height: 1.3; }
+
+/* line 32, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/reset */
+ol, ul {
+  list-style: none; }
+
+/* line 35, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/reset */
+blockquote, q {
+  quotes: none; }
+
+/* line 39, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/reset */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 43, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'latolight';
+  src: url('assets/fonts/lato-light-webfont.eot');
+  src: url('assets/fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/lato-light-webfont.woff2') format('woff2'), url('assets/fonts/lato-light-webfont.woff') format('woff'), url('assets/fonts/lato-light-webfont.ttf') format('truetype'), url('assets/fonts/lato-light-webfont.svg#latolight') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/*  All mixins can go here */
+/*  TYPOGRAPHY */
+/*  LAYOUT */
+/*  MEDIA QUERIES */
+/*  TRANSITIONS */
+/*  ANIMATIONS */
+/*  TRANSFORM  */
+/*  RETINA */
+/*************************
+
+    CSS HELPER CLASSES
+
+*************************/
+/* line 7, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.centered {
+  text-align: center; }
+
+/* line 11, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.justified {
+  text-align: justify; }
+
+/* line 15, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.float-left {
+  float: left;
+  overflow: hidden; }
+
+/* line 20, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.float-right {
+  float: right;
+  overflow: hidden; }
+
+/* line 25, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.clear {
+  clear: both; }
+
+/* line 29, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.hidden {
+  display: none; }
+
+/* line 33, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.show-block {
+  display: block; }
+
+/* line 37, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.show-table {
+  display: table; }
+
+/* line 41, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.show-table-cell {
+  display: table-cell;
+  vertical-align: middle; }
+
+/* line 46, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.cursor-pointer {
+  cursor: pointer; }
+
+/* line 50, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.allcaps {
+  text-transform: uppercase; }
+
+/* line 54, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.bolded {
+  font-weight: bold !important; }
+
+/* line 58, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.img-wrap {
+  text-align: center; }
+  /* line 60, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+  .img-wrap img {
+    max-width: 100%; }
+
+/* line 65, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.bg-cover, .circle-mask-bg {
+  background-position: center;
+  background-size: cover;
+  backround-repeat: no-repeat; }
+
+/* line 71, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.circle-mask-bg {
+  height: 100%;
+  border-radius: 50%; }
+
+/* line 77, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+.white-text {
+  color: #fff; }
+
+/* line 81, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/helpers */
+a:link, a:active, a:hover, a:visited {
+  text-decoration: none; }
+
+/* line 7, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/style.scss */
+html, body {
+  font-family: 'latolight', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* line 15, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/style.scss */
+.wrap {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0;
+  padding: 0 5%;
+  font-size: 1.3em;
+  color: #1a1a1a;
+  font-size: 1.125em; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .wrap {
+      font-size: 1.4375em; } }
+  @media (min-width: 1024px) {
+    .wrap {
+      font-size: 1.5625em; } }
+
+/* line 1, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/home */
+.landing-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+/* line 7, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/home */
+.heading {
+  font-family: 'latolight', sans-serif;
+  font-size: 1.75em;
+  color: #1a1a1a; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .heading {
+      font-size: 2em; } }
+  @media (min-width: 1024px) {
+    .heading {
+      font-size: 2.625em; } }
+
+/* line 15, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/home */
+.blurb {
+  width: 60%;
+  margin: 2% auto;
+  font-size: 1em;
+  color: #737373;
+  font-family: Georgia, sans-serif; }
+
+/* line 23, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/home */
+.nav {
+  max-width: 80%;
+  margin: 4% auto; }
+
+/* line 28, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/home */
+.nav-btn {
+  padding: 0.5% 1%; }
+
+/* line 1, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+.landing-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+/* line 7, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+.heading {
+  font-family: 'latolight', sans-serif;
+  font-size: 1.75em;
+  color: #1a1a1a; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .heading {
+      font-size: 2em; } }
+  @media (min-width: 1024px) {
+    .heading {
+      font-size: 2.625em; } }
+
+/* line 15, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+.blurb {
+  width: 60%;
+  margin: 2% auto;
+  font-size: 1em;
+  color: #737373;
+  font-family: Georgia, sans-serif; }
+
+/* line 23, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+.nav {
+  max-width: 80%;
+  margin: 4% auto; }
+
+/* line 28, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+.nav-btn {
+  padding: 0.5% 1%; }
+
+/* line 34, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/style.scss */
+a:link, a:active, a:visited, a:hover {
+  text-decoration: none;
+  color: #737373; }
+
+/*# sourceMappingURL=style.css.map */
