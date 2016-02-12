@@ -12,14 +12,28 @@
     color: $heading-text-color;
 }
 
+.logo {
+    margin: 2% auto;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
 .blurb {
     width: 60%;
-    margin: 4% auto 6%;
+    margin: 12% auto 16%;
+    color: $subheading-text-color;
     font-family: $base-serif-font-family;
     font-size: em(14);
-    @include tablet { font-size: em(14); }
-    @include desktop { font-size: em(14); }
-    color: $subheading-text-color;
+    @include tablet {
+        font-size: em(14);
+        margin: 6% auto 8%;
+    }
+    @include desktop {
+        font-size: em(14);
+        margin: 4% auto 6%;
+    }
 }
 
 .nav {

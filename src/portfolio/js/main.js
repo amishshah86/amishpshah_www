@@ -35,6 +35,7 @@ angular.module('portfolio', [
 
             var init = function () {
                 initLayout();
+                $state.go('home');
             };
 
             init();
@@ -52,13 +53,14 @@ angular.module('portfolio', [
 
     .config([
         '$stateProvider',
+        '$urlRouterProvider',
 
-        function ($stateProvider) {
+        function ($stateProvider, $urlRouterProvider) {
             $stateProvider
                 .state(
                     'home',
                     {
-                        url         : '',
+                        url         : '/',
                         controller  : 'MainController',
                         templateUrl : 'templates/home.html'
                     }
@@ -72,6 +74,8 @@ angular.module('portfolio', [
                     }
                 )
                 ;
+
+            $urlRouterProvider.when('','/');
         }
     ])
 ;
