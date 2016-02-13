@@ -46,14 +46,16 @@
     }
 
     .projects{
-        padding: 1%;
+        padding: 5% 1% 1%;
+        @include tablet { padding: 3% 1% 1%; }
+        @include desktop { padding: 2% 1% 1%; }
 
         .heading {
             font-size: em(20);
             @include tablet { font-size: em(22); }
             @include desktop { font-size: em(22); }
 
-            padding: 1% 0;
+            padding: 0 0 1%;
             overflow: hidden;
             height: 30px;
             @include tablet { height: 40px; }
@@ -79,71 +81,59 @@
             padding-top: 12px;
         }
 
-        .slide-content {
+        .slide-content-wrap, .slide-content {
             position: relative;
-            max-width: 100%;
+            width: 100%;
             height: 100%;
             margin: 0 auto;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+        }
 
-            img {
-                max-width: 100%;
+        .slide-content {
+
+            .img {
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                height: 60%;
+
+                @include tablet {
+                    height: 80%;
+                }
+                @include desktop {
+                    height: 80%;
+                }
             }
 
             .caption {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: calc(100% - 48px);
-                max-height: 25%;
-                padding: 14px 24px;
+                position: relative;
+                width: 98%;
+                max-height: 20%;
+                padding: 0 1%;
                 overflow: auto;
                 font-family: $base-serif-font-family;
-                font-size: em(12);
+                font-size: em(13);
+                line-height: 1.4;
+
                 @include tablet {
-                    font-size: em(10);
-                    background-color: $overlay-bg-color;
-                    color: $light-text-color;
+                    width: 94%;
+                    padding: 18px 3%;
+                    font-size: em(12);
                 }
                 @include desktop {
+                    width: 94%;
+                    padding: 24px 3%;
                     font-size: em(10);
-                    background-color: $overlay-bg-color;
-                    color: $light-text-color;
                 }
 
                 @include transition(all, 0.4s, $bezier-out);
-
-                em {
-                    display: none;
-                    color: $base-link-color;
-                    float: right;
-                    cursor: pointer;
-                    border-bottom: 1px solid transparent;
-
-                    @include tablet { display: inline; }
-                    @include desktop { display: inline; }
-                }
-
-                em:hover {
-                    border-bottom: 1px solid $base-link-color;
-                }
-
-                .caption-text {
-                    opacity: 1.0;
-                    @include transition(all, 0.9s, $bezier-out);
-                }
             }
 
-            .caption.collapsed {
-                width: 40px;
-
-                .caption-text {
-                    opacity: 0;
-                }
-            }
         }
-
     }
+
+    .projects:first-of-type{
+        padding-top: 0;
+    }
+
 }

@@ -2,7 +2,7 @@
 <div class="gallery" ng-controller="GalleryController">
     <div class="heading allcaps">
         <a class="homelink" ui-sref="home">
-            <img src="assets/logo_amish_shah.png"/>
+            <!-- <img src="assets/logo_amish_shah.png"/> -->
             Home
         </a>
         <span class="pagetitle" ui-sref="gallery">
@@ -23,20 +23,92 @@
                     ng-style="{'height': window_height * 0.7 + 'px'}"
                     ng-repeat="card in galleryData.listreports track by $index"
                     >
-                    <div class="slide-content" ng-style="{'background-image': 'url(\''+ card.img +'\')'}">
-                        <div class="caption" ng-class="{true: 'justified', false: 'centered collapsed'}[slideControl.showCaption]">
-                            <em ng-if="!slideControl.showCaption"
-                                ng-click="slideControl.showCaption = true">
-                                Show
-                            </em>
-                            <span class="caption-text" ng-if="slideControl.showCaption">
-                                {{card.caption}}
-                            </span>
-                            <em ng-if="slideControl.showCaption"
-                                ng-click="slideControl.showCaption = false">
-                                Hide
-                            </em>
-                            <div class="clear"></div>
+                    <div class="slide-content-wrap show-table" ng-style="{'height': window_height * 0.7 + 'px'}">
+                        <div class="slide-content show-table-cell">
+                            <div class="img" ng-style="{'background-image': 'url(\''+ card.img +'\')'}">
+                            </div>
+                            <div class="caption" ng-class="{true: 'justified', false: 'centered collapsed'}[slideControl.showCaption]">
+                                <span class="caption-text" ng-if="slideControl.showCaption">
+                                    {{card.caption}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </slick>
+        </div>
+    </section>
+
+    <section class="projects tvplus">
+        <div class="heading allcaps">
+            <img src="assets/logo_tvplus.png"/>
+            <div class="name">Tvplus</div>
+        </div>
+
+        <div class="slick-wrap">
+            <slick dots="true"
+                ng-if="!!galleryData.tvplus"
+                >
+                <div class="slide"
+                    ng-style="{'height': window_height * 0.7 + 'px'}"
+                    ng-repeat="card in galleryData.tvplus track by $index"
+                    >
+                    <div class="slide-content-wrap show-table" ng-style="{'height': window_height * 0.7 + 'px'}">
+                        <div class="slide-content show-table-cell">
+                            <div class="img" ng-style="{'background-image': 'url(\''+ card.img +'\')'}">
+                            </div>
+                            <div class="caption" ng-class="{true: 'justified', false: 'centered collapsed'}[slideControl.showCaption]">
+                                <span class="caption-text" ng-if="slideControl.showCaption">
+                                    {{card.caption}}
+                                </span>
+                                &nbsp;&nbsp;
+                                <a class="linkout"
+                                    ng-if="!!card.url"
+                                    ng-href="{{card.url}}"
+                                    target="_blank"
+                                    >
+                                    Click Here to View
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </slick>
+        </div>
+    </section>
+
+    <section class="projects freelance">
+        <div class="heading allcaps">
+            <div class="name">Freelance Work</div>
+        </div>
+
+        <div class="slick-wrap">
+            <slick dots="true"
+                ng-if="!!galleryData.freelance"
+                >
+                <div class="slide"
+                    ng-style="{'height': window_height * 0.7 + 'px'}"
+                    ng-repeat="card in galleryData.freelance track by $index"
+                    >
+                    <div class="slide-content-wrap show-table" ng-style="{'height': window_height * 0.7 + 'px'}">
+                        <div class="slide-content show-table-cell">
+                            <div class="img" ng-style="{'background-image': 'url(\''+ card.img +'\')'}">
+                            </div>
+                            <div class="caption" ng-class="{true: 'justified', false: 'centered collapsed'}[slideControl.showCaption]">
+                                <span class="caption-text" ng-if="slideControl.showCaption">
+                                    {{card.caption}}
+                                </span>
+                                &nbsp;&nbsp;
+                                <a class="linkout"
+                                    ng-if="!!card.url"
+                                    ng-href="{{card.url}}"
+                                    target="_blank"
+                                    >
+                                    Click Here to View
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

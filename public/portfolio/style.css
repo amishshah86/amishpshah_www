@@ -484,11 +484,17 @@ html, body {
     border-left: 1px solid #efefef; }
 /* line 48, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
 .gallery .projects {
-  padding: 1%; }
-  /* line 51, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+  padding: 5% 1% 1%; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .gallery .projects {
+      padding: 3% 1% 1%; } }
+  @media (min-width: 1024px) {
+    .gallery .projects {
+      padding: 2% 1% 1%; } }
+  /* line 53, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
   .gallery .projects .heading {
     font-size: 1.25em;
-    padding: 1% 0;
+    padding: 0 0 1%;
     overflow: hidden;
     height: 30px;
     border-bottom: 1px solid #efefef; }
@@ -504,88 +510,67 @@ html, body {
     @media (min-width: 1024px) {
       .gallery .projects .heading {
         height: 50px; } }
-    /* line 64, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+    /* line 66, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
     .gallery .projects .heading img {
       max-height: 100%;
       vertical-align: middle;
       float: left; }
-    /* line 70, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+    /* line 72, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
     .gallery .projects .heading .name {
       margin-top: 1%;
       float: right; }
-  /* line 76, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+  /* line 78, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
   .gallery .projects .slick-wrap {
     position: relative;
     width: 100%;
     padding-top: 12px; }
-  /* line 82, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
-  .gallery .projects .slide-content {
+  /* line 84, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+  .gallery .projects .slide-content-wrap, .gallery .projects .slide-content {
     position: relative;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
+    margin: 0 auto; }
+  /* line 93, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+  .gallery .projects .slide-content .img {
+    position: relative;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center; }
-    /* line 91, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
-    .gallery .projects .slide-content img {
-      max-width: 100%; }
-    /* line 95, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
-    .gallery .projects .slide-content .caption {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: calc(100% - 48px);
-      max-height: 25%;
-      padding: 14px 24px;
-      overflow: auto;
-      font-family: Georgia, sans-serif;
-      font-size: 0.75em;
-      -webkit-transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
-      -moz-transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
-      -ms-transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
-      -o-transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
-      transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96); }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .gallery .projects .slide-content .caption {
-          font-size: 0.625em;
-          background-color: rgba(0, 0, 0, 0.9);
-          color: #efefef; } }
-      @media (min-width: 1024px) {
-        .gallery .projects .slide-content .caption {
-          font-size: 0.625em;
-          background-color: rgba(0, 0, 0, 0.9);
-          color: #efefef; } }
-      /* line 118, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
-      .gallery .projects .slide-content .caption em {
-        display: none;
-        color: #737373;
-        float: right;
-        cursor: pointer;
-        border-bottom: 1px solid transparent; }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          .gallery .projects .slide-content .caption em {
-            display: inline; } }
-        @media (min-width: 1024px) {
-          .gallery .projects .slide-content .caption em {
-            display: inline; } }
-      /* line 129, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
-      .gallery .projects .slide-content .caption em:hover {
-        border-bottom: 1px solid #737373; }
-      /* line 133, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
-      .gallery .projects .slide-content .caption .caption-text {
-        opacity: 1;
-        -webkit-transition: all, 0.9s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
-        -moz-transition: all, 0.9s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
-        -ms-transition: all, 0.9s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
-        -o-transition: all, 0.9s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
-        transition: all, 0.9s, cubic-bezier(0.15, 0.25, 0.53, 0.96); }
-    /* line 139, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
-    .gallery .projects .slide-content .caption.collapsed {
-      width: 40px; }
-      /* line 142, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
-      .gallery .projects .slide-content .caption.collapsed .caption-text {
-        opacity: 0; }
+    background-position: center;
+    height: 60%; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .gallery .projects .slide-content .img {
+        height: 80%; } }
+    @media (min-width: 1024px) {
+      .gallery .projects .slide-content .img {
+        height: 80%; } }
+  /* line 108, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+  .gallery .projects .slide-content .caption {
+    position: relative;
+    width: 98%;
+    max-height: 20%;
+    padding: 0 1%;
+    overflow: auto;
+    font-family: Georgia, sans-serif;
+    font-size: 0.8125em;
+    line-height: 1.4;
+    -webkit-transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
+    -moz-transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
+    -ms-transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
+    -o-transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96);
+    transition: all, 0.4s, cubic-bezier(0.15, 0.25, 0.53, 0.96); }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .gallery .projects .slide-content .caption {
+        width: 94%;
+        padding: 18px 3%;
+        font-size: 0.75em; } }
+    @media (min-width: 1024px) {
+      .gallery .projects .slide-content .caption {
+        width: 94%;
+        padding: 24px 3%;
+        font-size: 0.625em; } }
+/* line 135, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/gallery */
+.gallery .projects:first-of-type {
+  padding-top: 0; }
 
 /* line 34, /Users/amish/localrepo/amishpshah_www/src/portfolio/scss/style.scss */
 a:link, a:active, a:visited, a:hover {
