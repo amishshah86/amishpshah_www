@@ -29,7 +29,7 @@ module
                     },
                     {
                         img: 'assets/preview_templates.png',
-                        caption: 'Set up several html templates used to generate the core product. The templates accept url query parameters. Pages are rendered based on the target media (print/screen) and custom color palette parameters.'
+                        caption: 'Set up several html templates used to generate the core product. Pages can be rendered based on the target media (print/screen) and custom color palettes passed as URL query parameters.'
                     }
                 ],
 
@@ -40,11 +40,11 @@ module
                     },
                     {
                         img: 'assets/preview_studio1.png',
-                        caption: 'Login Page: Built the second iteration of the internal web CMS as an AngularJS app. It was developed as a white label product and third party content producers from various client TV networks curated and published HTML microsites on all devices synced to the episode playing on air. This version allowed for a lot of custom client features through individual JSON config files.'
+                        caption: 'Login Page: Built the second iteration of the internal web CMS as an AngularJS app. It was developed as a white label product and third party content producers from client TV networks curated and published HTML spots to devices synced to the episode playing on air. This version of the CMS allowed for a lot of custom client features by referencing individual configuration files.'
                     },
                     {
                         img: 'assets/preview_studio2.png',
-                        caption: 'The main dashboard page with all relevant TV show buckets for a particular client with related episodes.'
+                        caption: 'App View: The main dashboard page with all relevant TV show buckets for a particular client with related episodes.'
                     },
                     {
                         img: 'assets/preview_studio3.png',
